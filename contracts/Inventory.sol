@@ -1,8 +1,10 @@
-pragma solidity >= 0.4.25;
+pragma solidity >= 0.5.0;
 // pragma experimental ABIEncoderV2;
 // import "github.com/Arachnid/solidity-stringutils/strings.sol";
 
-contract Inventory {
+import './Admin.sol';
+
+contract Inventory is Admin {
     // using strings for *;
 
     // Product's definitions
@@ -21,9 +23,6 @@ contract Inventory {
     // Product ID's counter
     uint private productIdCounter = 0;
 
-    // Addresses of admins, appointed by owner
-    mapping (address=>bool) private admins;
-
     // Product Modifiers
     modifier productsMustExist() {
         //Check if there is at least 1 Product.
@@ -31,34 +30,6 @@ contract Inventory {
         _;
     }
 
-    // TODO: Decouple admins related stuffs to separate contract
-    // Admins count
-    uint private adminsCount;
-
-    // Trx/Eth Address of Inventory's owner
-    address public owner;
-
-    modifier restricted() {
-        require(msg.sender == owner, "Access denied.");
-        _;
-    }
-
-    modifier adminOnly() {
-        require(admins[msg.sender], "Access denied.");
-        _;
-    }
-
-    constructor() public {
-       owner = msg.sender;
-       // register owner as an admin as well
-       admins[owner] = true;
-       adminsCount = 1;
-    }
-
-    /**
-     * Create a new Product on blockchain.
-     * Access Right: adminOnly
-     */
     function createProduct(string memory name, uint price, uint initialQuantity) public adminOnly {
         productIdCounter++;
         Product memory newProduct = Product({
