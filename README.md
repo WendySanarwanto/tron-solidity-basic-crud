@@ -56,7 +56,12 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
 2. Refactor [Admin.sol](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/contracts/Admin.sol) contract to use RBAC (Role-Based-Access-Control) feature, taken from [Open Zeppelin](https://openzeppelin.com/contracts/)'s RBAC contracts.
 
-3. Design & Implement a new smartcontract which acts as Manager & Factory of the CRUD smartcontract.
+3. Create ES6 Helper method(s) or a class that can be used to map Product tupple into JSON object, and use it to replace several lines in the test file. 
 
-4. Add/apply solidity [Best practices & Patterns](https://www.sitepoint.com/smart-contract-safety-best-practices-design-patterns/?fbclid=IwAR0GvB1tNcnjyIuMRomGTj6MofeiLIUyQRzy8e1etlhqDEInRmznEL8EJNE) on existing smartcontracts.
+4. Design & Implement a new smartcontract which acts as Manager & Factory of the CRUD smartcontract.
 
+5. Add/apply solidity [Best practices & Patterns](https://www.sitepoint.com/smart-contract-safety-best-practices-design-patterns/?fbclid=IwAR0GvB1tNcnjyIuMRomGTj6MofeiLIUyQRzy8e1etlhqDEInRmznEL8EJNE) on existing smartcontracts.
+
+6. Create the Web SPA clients in ReactJS, Angular and Vue.JS.
+
+7. Deploy the Web SPA client into IPFS.
