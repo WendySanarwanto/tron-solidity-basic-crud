@@ -50,4 +50,13 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/7_cdtl_2.png)
 
-__TODO: Add more info__
+### TODOs
+
+1. Implement functions which returns all data and also support: Pagination & Field's filtering, in the CRUD Smartcontract.
+
+2. Refactor [Admin.sol](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/contracts/Admin.sol) contract to use RBAC (Role-Based-Access-Control) feature, taken from [Open Zeppelin](https://openzeppelin.com/contracts/)'s RBAC contracts.
+
+3. Design & Implement a new smartcontract which acts as Manager & Factory of the CRUD smartcontract.
+
+4. Add/apply solidity [Best practices & Patterns](https://www.sitepoint.com/smart-contract-safety-best-practices-design-patterns/?fbclid=IwAR0GvB1tNcnjyIuMRomGTj6MofeiLIUyQRzy8e1etlhqDEInRmznEL8EJNE) on existing smartcontracts.
+
