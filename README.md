@@ -36,6 +36,18 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/4_start_tron_node.png)
 
-5. 
+5. Display the node's startup log messages through running `docker logs -f tron` command. Lookup, block, copy or note one or more Account address(es) and their Private Key(s).
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/5_accounts_private_keys.png)
+
+6. Open the `tronbox.js` file, lookup for `localdev` property, and then replace the value of `from` property with one of Account address you noted in prior step, also replace the value of `privateKey` property with the selected Account address'es Private Key.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/6_set_from_private_key.png)
+
+7. Run `npm run cdtl` command to compile all `.sol` files, deploy them into the local fullnode and then execute the [test](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/test/inventory-contract.test.js), at once. Confirm that there are no errors and all tests are passed.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/7_cdtl_1.png)
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/7_cdtl_2.png)
 
 __TODO: Add more info__
