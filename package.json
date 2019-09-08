@@ -1,0 +1,22 @@
+{
+  "name": "tron-basic-crud",
+  "version": "0.0.1",
+  "description": "",
+  "main": "tronbox-config.js",
+  "directories": {
+    "test": "jest ./test"
+  },
+  "scripts": {    
+    "startnode": "docker run -itd --rm -p 9090:9090 --name tron trontools/quickstart:2.0.17",
+    "compile": "tronbox compile --all",
+    "deploylocal": "tronbox migrate --reset --network localdev",
+    "testlocal": "tronbox test --network localdev",
+    "cdtl": "npm run compile && npm run deploylocal && npm run testlocal"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "tronweb": "^2.7.1"
+  }
+}
