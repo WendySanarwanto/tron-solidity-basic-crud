@@ -26,9 +26,15 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
 2. Change current directory into the cloned repository's root directory.
 
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/2_change_to_repo_dir.png)
+
 3. Install the project's NPM dependencies by running either one of these commands: `npm i` or `yarn`, in your terminal.
 
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/3_install_dependencies_yarn.png)
+
 4. Start [Tron](https://developers.tron.network/) local development node by running `npm run startnode` command in your terminal.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/4_start_tron_node.png)
 
 5. 
 
