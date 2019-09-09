@@ -10,8 +10,10 @@
     "startnode": "docker run -itd --rm -p 9090:9090 --name tron trontools/quickstart:2.0.17",
     "compile": "tronbox compile --all",
     "deploylocal": "tronbox migrate --reset --network localdev",
-    "testlocal": "tronbox test --network localdev",
-    "cdtl": "npm run compile && npm run deploylocal && npm run testlocal"
+    "deployshasta": "tronbox migrate --reset --network shasta",
+    "testshasta": "tronbox test --network shasta",
+    "cdtl": "npm run compile && npm run deploylocal && npm run testlocal",
+    "cdts": "npm run compile && npm run deployshasta && npm run testshasta"
   },
   "author": "",
   "license": "ISC",
