@@ -60,6 +60,7 @@ contract('Inventory', accounts => {
     });
     
     it(`should allow admins to get existing product by its id`, async () => {
+        assert.ok(paracetamolProductId, `Product ID is undefined. Test is not executed.`);
         const expectedProduct = {
             id: paracetamolProductId,
             ...paracetamolProduct,
@@ -82,6 +83,7 @@ contract('Inventory', accounts => {
     });
 
     it(`should allow admins to update existing product by its id`, async () => {
+        assert.ok(paracetamolProductId, `Product ID is undefined. Test is not executed.`);
         const { name } = paracetamolProduct;
         const newPrice = 3;
         const newQuantity = 5000;
