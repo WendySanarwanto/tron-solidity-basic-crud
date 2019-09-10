@@ -12,7 +12,6 @@ contract('Inventory', accounts => {
     let inventory;
 
     before(async() =>{
-        console.log(`[info] before is called.`);
         inventory = await InventoryContract.deployed();
     });
 
