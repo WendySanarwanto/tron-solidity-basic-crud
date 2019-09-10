@@ -6,7 +6,7 @@
   "directories": {
     "test": "jest ./test"
   },
-  "scripts": {    
+  "scripts": {
     "startnode": "docker run -itd --rm -p 9090:9090 --name tron trontools/quickstart:2.0.17",
     "compile": "tronbox compile --all",
     "deploylocal": "tronbox migrate --reset --network localdev",
@@ -18,7 +18,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^24.9.0",
+    "dotenv": "^8.1.0",
     "tronweb": "^2.7.1"
   }
 }

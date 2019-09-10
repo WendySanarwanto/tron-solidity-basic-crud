@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const port = process.env.HOST_PORT || 9090
 
 module.exports = {
@@ -21,7 +23,7 @@ Then, run the migration with:
       network_id: "1"
     },
     shasta: {
-      privateKey: process.env.PRIVATE_KEY_SHASTA,
+      privateKey: process.env.SHASTA_PK,
       userFeePercentage: 50,
       feeLimit: 1e8,
       fullHost: "https://api.shasta.trongrid.io",
@@ -36,8 +38,8 @@ Then, run the migration with:
       network_id: "9"
     },
     localdev: {
-      from: '<COPY THIS FROM RUNNING FULLNODE\' LOG TERMINAL>',
-      privateKey: '<COPY THIS FROM RUNNING FULLNODE\' LOG TERMINAL>',
+      from: process.env.LOCALDEV_FROM,
+      privateKey: process.env.LOCALDEV_PK,
       userFeePercentage: 50,
       feeLimit: 1e8,
       fullHost: 'http://127.0.0.1:' + port,
