@@ -41,11 +41,6 @@ contract('Inventory', accounts => {
 
             const getProductInLastRowResponse = await inventory.call('getProductInLastRow');
             assert.ok(Array.isArray(getProductInLastRowResponse) && (getProductInLastRowResponse.length > 0) );
-            const createdProduct = {
-                id: 0,
-                ...paracetamolProduct,
-                rowIndex: 0
-            };
             paracetamolProductId = getProductInLastRowResponse[0].toNumber();
             assert.equal(getProductInLastRowResponse[0].toNumber(), 1);
             assert.equal(getProductInLastRowResponse[1], expectedProduct.name);
