@@ -6,7 +6,7 @@ module.exports = {
   networks: {
     mainnet: {
       // Don't put your private key here:
-      privateKey: process.env.PRIVATE_KEY_MAINNET,
+      privateKey: process.env.MAIN_PK,
       /*
 Create a .env file (it must be gitignored) containing something like
 
@@ -16,7 +16,7 @@ Then, run the migration with:
 
   source .env && tronbox migrate --network mainnet
 
-*/
+*/    from: process.env.MAIN_FROM,
       userFeePercentage: 100,
       feeLimit: 1e8,
       fullHost: "https://api.trongrid.io",
