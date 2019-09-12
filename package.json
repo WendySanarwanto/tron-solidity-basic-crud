@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "tronbox-config.js",
-  "directories": {
-    "test": "jest ./test"
-  },
+  "directories": { },
   "scripts": {
     "startnode": "docker run -itd --rm -p 9090:9090 --name tron trontools/quickstart:2.0.17",
     "compile": "tronbox compile --all",
@@ -13,12 +11,19 @@
     "deployshasta": "tronbox migrate --reset --network shasta",
     "testshasta": "tronbox test --network shasta",
     "cdtl": "npm run compile && npm run deploylocal && npm run testlocal",
-    "cdts": "npm run compile && npm run deployshasta && npm run testshasta"
+    "cdts": "npm run compile && npm run deployshasta && npm run testshasta",
+    "specs": "jest --runInBand"
   },
-  "author": "",
+  "jest": {
+    "testRegex": "(/__tests__/.*|(\\.|/)(spec))\\.[jt]sx?$",
+    "verbose": true
+  },
+  "author": "Wendy Sanarwanto <wendy.sanarwanto@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^8.1.0",
+    "jest": "^24.9.0",
     "tronweb": "^2.7.1"
-  }
+  },
+  "dependencies": {}
 }
