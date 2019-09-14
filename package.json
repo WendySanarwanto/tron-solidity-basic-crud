@@ -9,6 +9,8 @@
     "compile": "tronbox compile --all",
     "deploylocal": "tronbox migrate --reset --network localdev",
     "deployshasta": "tronbox migrate --reset --network shasta",
+    "deploymain": "tronbox migrate --reset --network mainnet",
+    "testlocal": "tronbox test --network localdev",
     "testshasta": "tronbox test --network shasta",
     "cdtl": "npm run compile && npm run deploylocal && npm run testlocal",
     "cdts": "npm run compile && npm run deployshasta && npm run testshasta",
