@@ -66,7 +66,20 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
 4. Follow instructions on next page and ensure that you make notes both the Public & Private keys of the created account.
 
-### Request Test version of TRX coins from Fauchet
+### Request TRX test coins from Fauchet
+
+1. On your browser tab, browse to [TRX's Fauchet](https://www.trongrid.io/shasta) page.
+
+2. Copy & Paste the Public address of the created dev/test account into `Test wallet address` textbox input and click **SUBMIT** button. Notice that 10000 TRX is sent into the account.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/10_enter_wallet_address_on_fauchet.png)
+
+3. Repeat this step until the account has at least 100k TRX or you may want to add more.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/11_tronscan_account_after_received_100k_trx.png)
+
+4. Browse to [Shasta Tronscan](https://shasta.tronscan.org), sign in by using the Dev/Test account and freeze all the received TRX Test Coins where 80% of the total TRX is frozen to get Bandwidth and the other 20% is frozen to get Energy.
+
 
 **TODO: Add more info**
 
@@ -76,7 +89,7 @@ xxx. Create a new file in the root directory of this repository, and name it as 
 
 ### Compile & Deploy Inventory contract to Shasta
 
-
+**TODO: Add more info**
 
 ### TODOs
 
