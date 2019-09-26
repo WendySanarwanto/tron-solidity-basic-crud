@@ -50,13 +50,41 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/7_cdtl_2.png)
 
+## Deploy the smartcontract to  & Run the Automated Integration Tests against Shasta (Test Net)
+
+### Creating a new Tron account for Development & Testing
+
+1. Open your browser tab and browse to [Tronscan](https://tronscan.org) page.
+
+2. Click **SIGN IN** link on top-right of the page then followed by clicking **IMPORT A WALLET** dropped menu item.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/8_access_import_wallet_menu.png)
+
+3. On the shown modal dialog, click **CREATE WALLET** button.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/9_click_create_wallet.png)
+
+4. Follow instructions on next page and ensure that you make notes both the Public & Private keys of the created account.
+
+### Request Test version of TRX coins from Fauchet
+
+**TODO: Add more info**
+
+xxx. Create a new file in the root directory of this repository, and name it as **.env**.
+
+2. Edit 
+
+### Compile & Deploy Inventory contract to Shasta
+
+
+
 ### TODOs
 
 1. Implement functions which returns all data and also support: Pagination & Field's filtering, in the CRUD Smartcontract.
 
 2. Refactor [Admin.sol](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/contracts/Admin.sol) contract to use RBAC (Role-Based-Access-Control) feature, taken from [Open Zeppelin](https://openzeppelin.com/contracts/)'s RBAC contracts.
 
-3. Create ES6 Helper method(s) or a class that can be used to map Product tupple into JSON object, and use it to replace several lines in the test file. 
+3. Create ES6 Helper method(s) or a class that can be used to map Product tupple into JSON object, and use it to replace several lines in the test file.
 
 4. Design & Implement a new smartcontract which acts as Manager & Factory of the CRUD smartcontract.
 
