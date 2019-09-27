@@ -50,7 +50,7 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/7_cdtl_2.png)
 
-## Deploy the smartcontract to  & Run the Automated Integration Tests against Shasta (Test Net)
+## Deploy the Smartcontract to Shasta (Test Net) & Run the Automated Integration Tests
 
 ### Creating a new Tron account for Development & Testing
 
@@ -74,18 +74,17 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/10_enter_wallet_address_on_fauchet.png)
 
-3. Repeat this step until the account has at least 100k TRX or you may want to add more.
+3. Repeat this step until the account has at least 200k TRX or higher.
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/11_tronscan_account_after_received_100k_trx.png)
 
-4. Browse to [Shasta Tronscan](https://shasta.tronscan.org), sign in by using the Dev/Test account and freeze all the received TRX Test Coins where 80% of the total TRX is frozen to get Bandwidth and the other 20% is frozen to get Energy.
+4. Browse to [Shasta Tronscan](https://shasta.tronscan.org), sign in by using the Dev/Test account and freeze all the received TRX Test Coins where 50% of the total TRX is frozen to get Bandwidth and the other 50% is frozen to get Energy.
 
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/12_freezing_trx_allocations.png)
 
 **TODO: Add more info**
 
 xxx. Create a new file in the root directory of this repository, and name it as **.env**.
-
-2. Edit 
 
 ### Compile & Deploy Inventory contract to Shasta
 
