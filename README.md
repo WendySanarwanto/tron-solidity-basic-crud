@@ -82,6 +82,8 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/12_freezing_trx_allocations.png)
 
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/13_frozen_allocated_trx.png)
+
 **TODO: Add more info**
 
 xxx. Create a new file in the root directory of this repository, and name it as **.env**.
