@@ -66,7 +66,7 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
 4. Follow instructions on next page and ensure that you make notes both the Public & Private keys of the created account.
 
-### Request TRX test coins from Fauchet
+### Request TRX test coins from Fauchet and freeze them
 
 1. On your browser tab, browse to [TRX's Fauchet](https://www.trongrid.io/shasta) page.
 
@@ -84,26 +84,52 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/13_frozen_allocated_trx.png)
 
-**TODO: Add more info**
-
-xxx. Create a new file in the root directory of this repository, and name it as **.env**.
-
 ### Compile & Deploy Inventory contract to Shasta
 
-**TODO: Add more info**
+1. Create a new file in the root directory of this repository, and name it as **.env**.
+
+2. Open the **.env** file and add this line: `SHASTA_PK=<private key of the test/dev account>`. Example:
+
+    ```config
+    SHASTA_PK=a73b387e99b838c3d0e4635b6b7d2358b0526f731d066d9db5a504a3c2b929aa
+    ```
+
+3. Back to terminal window and run `npm run compile` command to compile all smartcontract `.sol` files.
+
+4. Run `npm run deployshasta` command to deploy (migrate) the compiled contracts to Shasta testnet. Confirm that migration process is finished successfully. Make note the deployed **Inventory** smartcontract's public address.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/14_deploy_sc_to_shasta.png)
+
+### Add more config parameters and Run the Integration test
+
+1. Edit the **.env** file and add this line: `SHASTA_INVENTORY_SC=<Deployed Inventory contract's address, noted in prior step>`.
+
+2. Add this line in the **.env** file: `CURRENT_NET=shasta` to ensure that we are going to run the test against the contracts deployed on Shasta test net. Example of current **.env** file:
+
+    ```config
+    SHASTA_PK=a73b387e99b838c3d0e4635b6b7d2358b0526f731d066d9db5a504a3c2b929aa
+    SHASTA_INVENTORY_SC=TCrcAbH3Umf6yGoDXtZBuNEjFJ9Qy5NkuC
+    CURRENT_NET=shasta
+    ```
+
+3. On terminal, run `npm run specs` for starting the integration tests. Confirm that all tests are passed.
+
+    ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/15_run_specs_against_shasta.png)
 
 ### TODOs
 
 1. Implement functions which returns all data and also support: Pagination & Field's filtering, in the CRUD Smartcontract.
 
-2. Refactor [Admin.sol](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/contracts/Admin.sol) contract to use RBAC (Role-Based-Access-Control) feature, taken from [Open Zeppelin](https://openzeppelin.com/contracts/)'s RBAC contracts.
+2. Create additional Unit Tests and Integration Tests which test unauthorised access.
 
-3. Create ES6 Helper method(s) or a class that can be used to map Product tupple into JSON object, and use it to replace several lines in the test file.
+3. Refactor [Admin.sol](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/contracts/Admin.sol) contract to use RBAC (Role-Based-Access-Control) feature, taken from [Open Zeppelin](https://openzeppelin.com/contracts/)'s RBAC contracts.
 
-4. Design & Implement a new smartcontract which acts as Manager & Factory of the CRUD smartcontract.
+4. Create ES6 Helper method(s) or a class that can be used to map Product tupple into JSON object, and use it to replace several lines in the test file.
 
-5. Add/apply solidity [Best practices & Patterns](https://www.sitepoint.com/smart-contract-safety-best-practices-design-patterns/?fbclid=IwAR0GvB1tNcnjyIuMRomGTj6MofeiLIUyQRzy8e1etlhqDEInRmznEL8EJNE) on existing smartcontracts.
+5. Design & Implement a new smartcontract which acts as Manager & Factory of the CRUD smartcontract.
 
-6. Create the Web SPA clients in ReactJS, Angular and Vue.JS.
+6. Add/apply solidity [Best practices & Patterns](https://www.sitepoint.com/smart-contract-safety-best-practices-design-patterns/?fbclid=IwAR0GvB1tNcnjyIuMRomGTj6MofeiLIUyQRzy8e1etlhqDEInRmznEL8EJNE) on existing smartcontracts.
 
-7. Deploy the Web SPA client into IPFS.
+7. Create the Web SPA clients in ReactJS, Angular and Vue.JS.
+
+8. Deploy the Web SPA client into IPFS.
