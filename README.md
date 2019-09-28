@@ -100,7 +100,7 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/14_deploy_sc_to_shasta.png)
 
-### Add more config parameters and Run the Integration test
+### Add more config parameters and Run the Integration tests
 
 1. Edit the **.env** file and add this line: `SHASTA_INVENTORY_SC=<Deployed Inventory contract's address, noted in prior step>`.
 
@@ -115,6 +115,30 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 3. On terminal, run `npm run specs` for starting the integration tests. Confirm that all tests are passed.
 
     ![alt text](https://github.com/WendySanarwanto/tron-solidity-basic-crud/blob/master/readme_assets/15_run_specs_against_shasta.png)
+
+### Compile & Deploy Inventory contract to Main Net
+
+1. Edit **.env** file and add this line: `MAIN_PK=<Private key of your main Tron's account>`.
+
+2. Back to terminal window Back to terminal window and run `npm run deploymain` command to deploy (migrate) the compiled contracts to the Main net. Confirm that migration process is finished successfully. Make note the deployed **Inventory** smartcontract's public address.
+
+### Change config parameters and Run the Integration tests
+
+1. Edit the **.env** file and add this line: `MAIN_INVENTORY_SC=<Deployed Inventory contract's address, noted in prior step>`.
+
+2. Change `CURRENT_NET` param from `shasta` to `mainnet`. Example of current **.env** file:
+
+    ```config
+    MAIN_PK=bedbbc9724de3f33e92c188c77210e4bf0503c66a0c6366ccdab7459668d067d
+    SHASTA_INVENTORY_SC=
+    SHASTA_PK=a73b387e99b838c3d0e4635b6b7d2358b0526f731d066d9db5a504a3c2b929aa
+    SHASTA_INVENTORY_SC=TCrcAbH3Umf6yGoDXtZBuNEjFJ9Qy5NkuC
+    CURRENT_NET=mainnet
+    ```
+
+3. **Ensure that all of your TRX in your main account are freezed and there are enough available Bandwidth & Energy**.
+
+4. On terminal, run `npm run specs` for starting the integration tests. Confirm that all tests are passed.
 
 ### TODOs
 

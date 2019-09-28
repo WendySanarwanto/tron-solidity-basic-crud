@@ -21,7 +21,7 @@
     "verbose": true
   },
   "author": "Wendy Sanarwanto <wendy.sanarwanto@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "dotenv": "^8.1.0",
     "jest": "^24.9.0",
