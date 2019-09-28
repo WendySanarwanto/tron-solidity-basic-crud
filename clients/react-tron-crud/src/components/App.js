@@ -6,7 +6,7 @@ import { doInitialiseTronWeb } from '../actions';
 
 class App extends Component {
   componentDidMount() {
-    // TODO: Initialise TronWeb
+    // Initialise TronWeb
     const { doInitialiseTronWeb } = this.props;
     doInitialiseTronWeb();
   }
