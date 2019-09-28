@@ -130,6 +130,7 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
 
     ```config
     MAIN_PK=bedbbc9724de3f33e92c188c77210e4bf0503c66a0c6366ccdab7459668d067d
+    MAIN_INVENTORY_SC=TT7bwZuV3ohc9OnMdQPkvQY3PgEzCkLo1I
     SHASTA_INVENTORY_SC=
     SHASTA_PK=a73b387e99b838c3d0e4635b6b7d2358b0526f731d066d9db5a504a3c2b929aa
     SHASTA_INVENTORY_SC=TCrcAbH3Umf6yGoDXtZBuNEjFJ9Qy5NkuC
