@@ -13,7 +13,6 @@ const paracetamolProduct = {
 
 describe('Inventory smartcontract', () => {      
     let inventoryContract = null;
-    let inventoryScAbi = null;
     let createdProductId = null;
     const responseDelay = 1000;
 
@@ -24,7 +23,6 @@ describe('Inventory smartcontract', () => {
                 fullHost, privateKey
             });
             inventoryContract = await tronWeb.contract().at(inventoryScAddress);
-            inventoryScAbi = inventoryContract.abi;
         } catch(err) {
             console.log(`[error] err: \n`, err);
         }
@@ -34,7 +32,7 @@ describe('Inventory smartcontract', () => {
         // console.log(`[debug] inventoryContract: \n`, inventoryContract);
         // console.log(`[debug] inventoryContract.tronWeb: \n`, inventoryContract.tronWeb);
         assert.ok(inventoryContract);
-        assert.ok(Array.isArray(inventoryScAbi) && (inventoryScAbi.length > 0));
+        assert.ok(inventoryContract.tronWeb);
     });
 
     it(`should have no products after being deployed, previously`, async () => {
