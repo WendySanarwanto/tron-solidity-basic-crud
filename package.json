@@ -18,6 +18,7 @@
   },
   "jest": {
     "testRegex": "(/__tests__/.*|(\\.|/)(spec))\\.[jt]sx?$",
+    "testPathIgnorePatterns": ["clients"],
     "verbose": true
   },
   "author": "Wendy Sanarwanto <wendy.sanarwanto@gmail.com>",
