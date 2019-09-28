@@ -136,9 +136,17 @@ A solidity project which demonstrates CRUD functions in a solidity smartcontract
     CURRENT_NET=mainnet
     ```
 
-3. **Ensure that all of your TRX in your main account are freezed and there are enough available Bandwidth & Energy**.
+3. Ensure that all of your TRX in your main account are freezed and there are enough available Bandwidth & Energy (roughly 200k-300k energy).
 
 4. On terminal, run `npm run specs` for starting the integration tests. Confirm that all tests are passed.
+
+    ---
+
+    **Note**
+
+    if you have unfreezed TRX and insufficient Energy and or Bandwidth, **your TRX could be deducted either after you've deployed the contracts or when running the integration tests**. Also, some or all integration tests may be failing if you have not enough Bandwidth & Energy or TRX to burn.
+
+    ---
 
 ### TODOs
 
