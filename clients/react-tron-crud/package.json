@@ -10,6 +10,7 @@
     "react-scripts": "3.1.2",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.88.1",
     "tronweb": "^2.7.2"
   },
   "scripts": {
