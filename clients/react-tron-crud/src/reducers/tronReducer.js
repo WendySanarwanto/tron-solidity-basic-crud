@@ -1,6 +1,8 @@
 import { TRONWEB_INITIALISED, TRONWEB_NOT_FOUND } from '../actions/types';
 
 const INITIAL_STATE = {
+    contract: null,
+    currentNet: 'N/A',
     tronWeb: null
 };
 
@@ -9,7 +11,7 @@ const tronReducer = (state=INITIAL_STATE, action) => {
         case TRONWEB_INITIALISED: 
             return {...state, ...action.payload};
         case TRONWEB_NOT_FOUND:
-            return {...state, ...{ tronWeb: null }}
+            return {...state, ...INITIAL_STATE}
         default: 
             return state;
     }

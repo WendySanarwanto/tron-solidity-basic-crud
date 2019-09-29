@@ -1,10 +1,24 @@
-import React, { Component } from 'react'
-import { Container, Image, Menu, Visibility } from 'semantic-ui-react';
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux';
+import { Container, Icon, Image, Label, Menu, Visibility } from 'semantic-ui-react';
 
-export default class MenuHeader extends Component {
+class MenuHeader extends Component {
   state = {
     menuFixed: false
   };
+
+  renderCurrentNetLabel = (currentNet) => {
+    const color = currentNet !== 'N/A' ? 'blue' : 'grey';
+    const iconName = currentNet !== 'N/A' ? 'signal' : 'times';
+    return (
+      <Fragment>
+        <Label color={ color }>
+          <Icon name={ iconName }/>
+          { currentNet }
+        </Label>
+      </Fragment>
+    );
+  }
 
   render() {
     const { menuFixed } = this.state;
@@ -22,10 +36,14 @@ export default class MenuHeader extends Component {
             style={ menuFixed ? styles.fixedMenu : styles.menu }
           >
             <Container text>
-              { /* The Brand */ }
               <Menu.Item><Image size='mini' src='https://ipfs.io/ipfs/QmRrkjush8eXoqNtZwXtMSotEDtbs76cRXiGcnyEnvGw9c'/></Menu.Item>
               <Menu.Item header>Tron CRUD Demo</Menu.Item>
               <Menu.Item link>Inventory</Menu.Item>
+              <Menu.Menu position='right'>
+                <Menu.Item>
+                  { this.renderCurrentNetLabel(this.props.currentNet) }
+                </Menu.Item>
+              </Menu.Menu>
             </Container>          
           </Menu>
         </Visibility>
@@ -49,3 +67,11 @@ const styles = {
     boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.2)',    
   }
 };
+
+function mapStateToProps({ tron }) {
+  return {
+    currentNet: tron.currentNet
+  };
+}
+
+export default connect(mapStateToProps)(MenuHeader);
