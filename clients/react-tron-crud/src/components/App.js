@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { doInitialiseTronWeb } from '../actions';
+import MenuHeader from './MenuHeader';
 // import './App.css';
 
 class App extends Component {
@@ -14,9 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header>
-          <h2>Tron CRUD Demo</h2>
-        </header>
+        <MenuHeader />
         <section>
           <h3>Build Main section here !</h3>
         </section>
